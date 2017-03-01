@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users>
+	<user username="admin" password="admin" nickname="admin" email="admin@qq.com" question="你最喜欢的一个动物" answer="猫"/>
+	<question name="你最喜欢的一个动物" flag="0"></question>
+	<question name="你最喜欢的美食" flag="0"></question>
+    <question name="你最喜欢做的运动" flag="0"></question>
+      <user username="john" password="123456" nickname="123456789" email="18611023455@qq.com" question="你最喜欢的一个动物" answer="龙利鱼" jihao="1"/>
+        <user username="collin" password="123456" nickname="568956789" email="18611023455@qq.com" question="你最喜欢的一个动物" answer="龙利鱼" jihao="1"/>
+          <user username="bushi" password="123456" nickname="122896789" email="18611023455@qq.com" question="你最喜欢的一个动物" answer="龙利鱼" jihao="1"/>
+          <user username="钢铁侠" password="123456" nickname="122896789" email="18611023455@qq.com" question="你最喜欢的一个动物" answer="龙利鱼" jihao="1"/>
+          <user username="蜘蛛侠" password="123456" nickname="122896789" email="18611023455@qq.com" question="你最喜欢的一个动物" answer="龙利鱼" jihao="1"/>
+          <user username="Aobama" password="123456" nickname="122896789" email="18611023455@qq.com" question="你最喜欢的一个动物" answer="龙利鱼" jihao="1"/>
+</users>
