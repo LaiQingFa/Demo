@@ -41,7 +41,7 @@ SPRING+SPING MVC + MYBATIS 三大框架整合步骤
 
 * 和Hibernate逆向生成一样，这里也需要一个配置文件。在这边设置的时候，配置文件里面设置的生成位置（包名）要和项目中的包名一一对应。
 	
-* xml文件:<table tableName="tmessage" domainObjectName="Tmessgae" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+* xml文件: table tableName="tmessage" domainObjectName="Tmessgae" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"
 
 * tableName和domainObjectName为必选项，分别代表数据库表名和生成的实例类名，其余的可以自定义去选择（一般情况下均为false）。
 
