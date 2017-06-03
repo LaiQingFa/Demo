@@ -41,6 +41,7 @@ SPRING+SPING MVC + MYBATIS 三大框架整合步骤
 
 * 和Hibernate逆向生成一样，这里也需要一个配置文件。在这边设置的时候，配置文件里面设置的生成位置（包名）要和项目中的包名一一对应
 
+	
 	<table tableName="tmessage" domainObjectName="Tmessgae" 
 
 	enableCountByExample="false" enableUpdateByExample="false" 
@@ -56,9 +57,10 @@ SPRING+SPING MVC + MYBATIS 三大框架整合步骤
 	java -jar mybatis-generator-core-1.3.2.jar -configfile generatorConfig.xml -overwrite
 	
 ### 八、将生成的mapper文件，xml文件放到项目中com.ssmdemo.mapper这个package下，将生成的实体类文件，放到com.ssmdemo.entity这个包下
+
 * 在WEB-INF目录下新增加web.xml，这个web.xml有两个作用：
 	
-	1. 通过ContextLoaderListener在web app启动的时候，获取contextConfigLocation配置文件的文件名applicationContext.xml，并进行Spring相关初始化工作
+	1.通过ContextLoaderListener在web app启动的时候，获取contextConfigLocation配置文件的文件名applicationContext.xml，并进行Spring相关初始化工作
 	
 	2.有任何访问，都被DispatcherServlet所拦截，这就是Spring MVC那套工作机制了
 	
