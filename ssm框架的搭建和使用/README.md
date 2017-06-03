@@ -22,9 +22,9 @@ Spring+spring MVC + Mybatis 三大框架整合步骤
 - 找到.project文件，找到里面的<natures>标签，查看是否有下面的代码，没有则复制进去。
 
 * Xml代码
-	<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
-	<nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature>
-	<nature>org.eclipse.jem.workbench.JavaEMFNature</nature>
+	<!-- <nature>org.eclipse.wst.common.project.facet.core.nature</nature> -->
+	<!-- <nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature> -->
+	<!-- <nature>org.eclipse.jem.workbench.JavaEMFNature</nature> -->
 - 刷新导入的项目
 - 在项目上点击右键，进入Properties配置，MyEclipse-->Project Facets,进入属性设置：勾选Dynamic Web Module和Java、JavaScript  ，然后应用，确认
 - 这个时候在项目下回多出一个WebRoot  ,删掉WebRoot下的lib, 将原有的web下的lib以及其他资源放入WebRoot，最后删掉原有的名字为web的Folder
@@ -41,7 +41,7 @@ Spring+spring MVC + Mybatis 三大框架整合步骤
 
 * 和Hibernate逆向生成一样，这里也需要一个配置文件。在这边设置的时候，配置文件里面设置的生成位置（包名）要和项目中的包名一一对应。
 	
-* xml文件: <table tableName="tmessage" domainObjectName="Tmessgae" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+* xml文件: table tableName="tmessage" domainObjectName="Tmessgae" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"
 
 * tableName和domainObjectName为必选项，分别代表数据库表名和生成的实例类名，其余的可以自定义去选择（一般情况下均为false）。
 
