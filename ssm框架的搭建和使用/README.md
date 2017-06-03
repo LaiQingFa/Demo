@@ -22,9 +22,9 @@ Spring+spring MVC + Mybatis 三大框架整合步骤
 - 找到.project文件，找到里面的<natures>标签，查看是否有下面的代码，没有则复制进去。
 
 * Xml代码
-	<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
-	<nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature>
-	<nature>org.eclipse.jem.workbench.JavaEMFNature</nature>
+	1.<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
+	2.<nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature>
+	3.<nature>org.eclipse.jem.workbench.JavaEMFNature</nature>
 - 刷新导入的项目
 - 在项目上点击右键，进入Properties配置，MyEclipse-->Project Facets,进入属性设置：勾选Dynamic Web Module和Java、JavaScript  ，然后应用，确认
 - 这个时候在项目下回多出一个WebRoot  ,删掉WebRoot下的lib, 将原有的web下的lib以及其他资源放入WebRoot，最后删掉原有的名字为web的Folder
