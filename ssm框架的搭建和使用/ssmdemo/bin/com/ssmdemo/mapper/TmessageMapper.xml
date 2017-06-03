@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssmdemo.mapper.TmessageMapper" >
+  <resultMap id="BaseResultMap" type="com.ssmdemo.entity.Tmessage" >
+    <id column="messageid" property="messageid" jdbcType="INTEGER" />
+    <result column="userid" property="userid" jdbcType="INTEGER" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="contents" property="contents" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    messageid, userid, username, contents
+  </sql>
+    <select id="list" resultMap="BaseResultMap" parameterType="com.ssmdemo.entity.Tmessage" >
+    select 
+    <include refid="Base_Column_List" />
+    from tmessage
+    where userid = #{userid,jdbcType=INTEGER}
+  </select>
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from tmessage
+    where messageid = #{messageid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tmessage
+    where messageid = #{messageid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.ssmdemo.entity.Tmessage" >
+    insert into tmessage (messageid, userid, username, 
+      contents)
+    values (#{messageid,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, 
+      #{contents,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ssmdemo.entity.Tmessage" >
+    insert into tmessage
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="messageid != null" >
+        messageid,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="contents != null" >
+        contents,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="messageid != null" >
+        #{messageid,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="contents != null" >
+        #{contents,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ssmdemo.entity.Tmessage" >
+    update tmessage
+    <set >
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="contents != null" >
+        contents = #{contents,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where messageid = #{messageid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ssmdemo.entity.Tmessage" >
+    update tmessage
+    set userid = #{userid,jdbcType=INTEGER},
+      username = #{username,jdbcType=VARCHAR},
+      contents = #{contents,jdbcType=VARCHAR}
+    where messageid = #{messageid,jdbcType=INTEGER}
+  </update>
+</mapper>
