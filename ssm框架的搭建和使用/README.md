@@ -1,6 +1,6 @@
 README
 ===========================
-SPRING+SPING MVC + MYBATIS 三大框架整合步骤
+Spring+spring MVC + Mybatis 三大框架整合步骤
 ****
 #### 个人笔记
 
