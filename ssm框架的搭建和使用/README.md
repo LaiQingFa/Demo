@@ -39,8 +39,9 @@ SPRING+SPING MVC + MYBATIS 三大框架整合步骤
 	
 ### 七、使用Mybatis-Generator自动生成Mybatis映射的相关文件，包括实体类，mapper、xml文件，下载Mybatis-Generator文件夹就可以使用
 
-* 和Hibernate逆向生成一样，这里也需要一个配置文件。在这边设置的时候，配置文件里面设置的生成位置（包名）要和项目中的包名一一对应
+* 和Hibernate逆向生成一样，这里也需要一个配置文件。在这边设置的时候，配置文件里面设置的生成位置（包名）要和项目中的包名一一对应。
 
+	xml文件：
 	
 	<table tableName="tmessage" domainObjectName="Tmessgae" 
 
