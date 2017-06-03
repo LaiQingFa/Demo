@@ -25,6 +25,7 @@ Spring+spring MVC + Mybatis 三大框架整合步骤
 	<p><nature>org.eclipse.wst.common.project.facet.core.nature</nature></p>
 	<p><nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature></p>
 	<p><nature>org.eclipse.jem.workbench.JavaEMFNature</nature></p>
+	上面三行xml代码的元素名是nature，不知道为什么md文件中不能显示，用的时候在每一行加上元素的标签就行
 - 刷新导入的项目
 - 在项目上点击右键，进入Properties配置，MyEclipse-->Project Facets,进入属性设置：勾选Dynamic Web Module和Java、JavaScript  ，然后应用，确认
 - 这个时候在项目下回多出一个WebRoot  ,删掉WebRoot下的lib, 将原有的web下的lib以及其他资源放入WebRoot，最后删掉原有的名字为web的Folder
